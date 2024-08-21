@@ -67,8 +67,7 @@ suite('Functional Tests', function () {
 });
 
 const Browser = require('zombie');
-Browser.site = 'https://qn05g6dh-3000.euw.devtunnels.ms/'; 
-
+Browser.localhost('127.0.0.1', 3000); 
 
 suite('Functional Tests with Zombie.js', function () {
   this.timeout(5000);
