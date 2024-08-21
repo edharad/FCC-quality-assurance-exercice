@@ -5,6 +5,7 @@ const app = express();
 const cors = require('cors');
 const runner = require('./test-runner');
 
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
@@ -13,6 +14,8 @@ app.get('/', function (req, res) {
 })
 
 app.use(express.static(__dirname + '/public'));
+
+
 
 app.get('/hello', function (req, res) {
   const name = req.query.name || 'Guest';
